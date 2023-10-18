@@ -1,0 +1,1367 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>Linux基础命令 | L1uleeの万事屋</title><meta name="keywords" content="Linux,操作系统"><meta name="author" content="L1ulee"><meta name="copyright" content="L1ulee"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="Linux基础命令"><meta name="application-name" content="Linux基础命令"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="Linux基础命令"><meta property="og:url" content="https://blog.2sec.io/2022/05/11/Linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/index.html"><meta property="og:site_name" content="L1uleeの万事屋"><meta property="og:description" content="Linux基础命令，适合新手快速上手"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://bu.dusays.com/2023/10/18/652ec6e6bfd3a.gif"><meta property="article:author" content="L1ulee"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://bu.dusays.com/2023/10/18/652ec6e6bfd3a.gif"><meta name="description" content="Linux基础命令，适合新手快速上手"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="https://blog.2sec.io/2022/05/11/Linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.20/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: undefined,
+  postHeadAiDescription: undefined,
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: {"enable":true,"default":"晚上好👋","list":[{"greeting":"晚安😴","startTime":0,"endTime":5},{"greeting":"早上好鸭👋, 祝你一天好心情！","startTime":6,"endTime":9},{"greeting":"上午好👋, 状态很好，鼓励一下～","startTime":10,"endTime":10},{"greeting":"11点多啦, 在坚持一下就吃饭啦～","startTime":11,"endTime":11},{"greeting":"午安👋, 宝贝","startTime":12,"endTime":14},{"greeting":"🌈充实的一天辛苦啦！","startTime":14,"endTime":18},{"greeting":"19点喽, 奖励一顿丰盛的大餐吧🍔。","startTime":19,"endTime":19},{"greeting":"晚上好👋, 在属于自己的时间好好放松😌~","startTime":20,"endTime":24}]},
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: undefined,
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"该文章已经","messageNext":"天没有更新啦! 文章内容可能已过时."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: L1ulee","link":"链接: ","source":"来源: L1uleeの万事屋","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: 'L1uleeの万事屋',
+  title: 'Linux基础命令',
+  postAI: '',
+  pageFillDescription: '一、什么是Linux命令, 什么是Shell？, 二、命令提示符, 什么是家(home)目录？, 三、Linux的常用命令, 常用关机命令, init命令, 常用重启命令, 拓展命令, 切换路径命令, 打印工作目录命令, 显示目录内容命令, 文件读写操作, 新建文件夹命令, 删除文件夹命令, 新建文件命令, 删除命令, 复制命令, 移动命令, 显示文件内容命令, 文件查找命令, 内容查找命令, 四、Linux命令行的辅助操作, 快捷键：, 五、Linux中打包和压缩, 打包和压缩有什么区别：, 打包命令, 压缩命令, 解压缩命令, 六、Vix2FVim编辑器的使用, Vim编辑器的安装, 命令模式, 输入模式, 底线命令模式, 一般模式光标移动常用方法, 一般模式下搜索替换指令说明, 一般模式下删除、复制与粘贴的常用方法, 一般模式切换到编辑模式的方法说明, 一般模式切换到命令行模式的指令说明及Vim环境变量变更指令说明一什么是命令输入一串字符命令由将这条命令翻译为系统内核能够懂的语言然后系统内核便根据这条命令去执行相关操作什么是系统中运行的一种特殊程序在用户和内核之间充当翻译官用户登录系统时自动加载一个程序是系统中默认使用的程序文件位于目录下用户内核硬件接收用户输入的指令解释命令传递给系统内核执行二命令提示符这是系统的命令提示符具体含义如下这是提示符的分隔符号没有特殊含义方便查看显示当前登录的用户名分隔符号没有特殊含义当前系统的简写主机名通过命令查看完整主机名代表用户当前所在目录此例中用户当前所在的目录是家目录命令提示符用这个符号标识登录的用户权限等级超级用户提示符普通用户提示符什么是家目录家目录又称主目录用户登录后要有一个初始登录位置这个初始登录位置就称为用户的家目录超级用户的家目录普通用户的家目录用户名用户在自己的家目录中拥有完整权限三的常用命令常用关机命令立刻关机立刻关机需要权限命令关机纯文本模式图形模式重新启动常用重启命令立刻重启拓展命令选项时间计划关机选项含义取消前一个关机命令关机重启示例立刻关机十分钟后关机关机立刻重启十分钟后关机重启切换路径命令是的缩写用来切换工作目录基本格式如下相对路径或绝对路径除此之外命令后面可能跟一些特殊符号表达含义如下特殊符号作用代表当前登录用户的主目录用户名表示切换至指定用户的主目录代表上次所在目录代表当前目录不会有路径变化代表上级目录打印工作目录命令是的缩写用来在目录上显示当前目录的绝对路径基本格式如下显示目录内容命令是的缩写是最常见的目录操作命令其主要功能是显示当前目录下的内容基本格式如下选项目录名具体选项有等常用命令文件读写操作新建文件夹命令是的缩写用户创建新目录此命令所有用户都可使用基本格式如下选项目录名具体选项有选项含义递归创建所有目录选项自定义目录权限删除文件夹命令是的缩写命令用于删除空目录此命令所有用户都可使用基本格式如下选项目录名具体选项有选项含义递归删除所有空目录因只能删除空目录所以此命令不经常使用新建文件命令命令是用于用户创建新文件并且此命令可以修改文件的时间参数当文件存在时系统中每个文件主要拥有个时间参数通过命令进行查看分别是文件的访问时间数据修改时间以及状态修改时间访问时间简称只要文件的内容被读取访问时间就会更新数据修改时间简称当文件的内容数据发生改变数据修改时间就会跟着相应改变状态修改时间简称当文件的状态发生变化就会相应改变这个时间基本格式如下选项文件名具体选项有选项含义只修改文件的访问时间仅修改文件的时间参数个时间参数都改变如果文件不存在则不信建立文件后面可以跟欲修订的日期只修改访问时间和数据修改时间状态修改时间变更为当前服务器时间只修改文件的数据修改时间后面可跟欲修订时间书写格式删除命令命令是的缩写用于用户永久性的删除文件或者目录在使用命令删除文件或目录时系统不会产生任何提示信息基本格式如下选项文件或目录具体选项有选项含义强制删除和选项相反使用系统不再询问直接删除目标在删除文件或者目录前系统会给出提示信息防止用户误删递归删除主要用户删除目录可删除指定目录及包含所有内容包括子目录和文件注意命令是一个具有破坏性的命令因为命令会永久性的删除文件或目录这就意味着如果没有对文件或目录进行备份一旦使用命令将其删除将无法恢复除非依赖第三方的数据恢复工具复制命令命令是的缩写用于文件或目录的拷贝基本格式如下选项源文件目标文件具体格式如下选项含义相当于选项的集合如果源文件为软链接对硬链接无效则复制出的目标文件也为软连接询问如果目标文件已经存在则会询问是否覆盖把目标文件建立为源文件的硬链接文件而不是复制源文件把目标文件建立为源文件的软链接文件而不是复制源文件复制后的目标文件保留源文件的属性包括所有者所属组权限和时间递归复制用于复制目录若目标文件比源文件有差异则使用该选项可以更新目标文件此选项可用于对文件的升级和备份移动命令命令是的缩写用于目录或文件的移动在移动中可以对文件或者目录进行重命名基本格式如下选项源文件目标文件具体选项有选项含义强制覆盖如果目标文件已经存在则不询问直接强制覆盖交互移动如果目标文件已经存在则询问用户是否覆盖默认选项如果目标文件已经存在则不会覆盖移动而且不询问用户显示文件或目录的移动过程若目标文件已经存在但两者相比源文件更新则会对目标文件进行升级注意同命令相似命令也是一个具有破坏性的命令如果使用不当很可能给系统带来灾难性的后果显示文件内容命令是链接连续的简写用来显示文本文件的内容类似于下的命令也可以把几个文件内容附加到另一个文件中即连接合并文件基本格式如下选项文件名文件文件文件具体选项有选项含义相当于选项的整合用于列出所有隐藏符号列出每行结尾的回车符对输出的所有行进行编号同不同此选项表示只对非空行进行编号把键显示出来列出特殊字符当遇到有连续行以上的空白行时就替换为行的空白行注意命令适合查看不太大的文件当然在中是可以使用其他的命令或方法来查看大文件的命令是可以分页显示文本文件的内容使用者可以逐页阅读文件中内容基本格式如下选项文件名选项含义计算行数时以实际的行数而不是自动换行过后的字数不以卷动的方式显示每一页而是先清除屏幕后再显示内容跟选项相似不同的是先显示内容再清除其他旧资料当遇到有连续两行以上的空白行时就替换为一行的空白行不显示下引号根据环境变量指定的终端而有所不同从第行开始显示文件内容代表数字命令交互指令集功能表交互命令功能或显示命令交互命令帮助或退出在当前行启动一个编辑器显示当前文件的文件名和行号命令或命令在子中执行指定命令回车键向下移动一行空格键向下移动一页刷新屏幕显示当前行的行号转到上一次搜索开始的地方向下滚动一页重复上次输入的命令字符串搜索指定的字符串向下移动半页向上移动一页命令是显示指定文件前若干行的文件内容具体格式如下选项文件名选项含义这里的表示行数该选项用来显示文件前行的内容如果使用作为参数则表示除了文件最后行外显示剩余的全部内容这里的表示字节数该选项用来显示文件前个字节的内容如果使用则表示除了文件最后字节的内容显示剩余全部内容显示文件名注意如不设置显示的具体行数则默认显示行的文本数据命令正好和相反它用来查看文件末尾的数据基本格式如下选项文件名选项含义这里的指的是行数该选项表示输出最后行在此基础上如果使用则表示从文件的第行开始输出这里的指的是字节数该选项表示输出最后字节的内容在此基础上使用则表示从文件的第个字节开始输出输出文件变化后新增加的数据注意命令会显示文件的最后行内容而且光标不会退出命令每隔一秒会检查一下文件是否增加新的内容如果增加就追加到原来的输出结果后面并显示文件查找命令命令是在目录结构中搜索文件并执行指定的操作命令提供相当多的查找条件功能很强大即使系统中含有网络文件系统命令在该文件系统中同样有效在运行一个非常消耗资源的命令时很多人都倾向于把它放在后台执行因为遍历一个大的文件系统可能会花费很长的时间基本格式如下路径选项输出格式路径含义表示目录表示当前目录表示根目录选项含义按照名字查找安装权限查找不在当前指定的目录下查找文件所属主来查找文件所在所属组来查找查找无有效所属组的文件查找无有效所属主的文件按照文件类型查找输出格式含义表示将结果输出到标准输出对匹配的文件执行该参数所给出的命令形式为注意和之间有空格与作用相同区别在于在执行命令之前都会给出提示让用户确认是否执行内容查找命令命令时的缩写命令是用来在每一个文件或中或特定输出上搜索特定的模式当使用时包含指定字符模式的每一行内容都会被打印显示到屏幕上但是使用命令并不改变文件中的内容基本格式如下选项模式文件名注意基本格式中的模式要么是字符串要么是正则表达式选项含义仅列出文件中包含模式的行数忽略模式中的字母大小写列出带有匹配行的文件名在每一行的最前面列出行号列出没有匹配模式的行把表达式当做一个完整的单字符来搜寻忽略那些部分匹配的行注意如果是搜索多个文件命令的搜索结果只显示文件中发现匹配模式的文件名而如果搜索单个文件命令的结果将显示每一个包含匹配模式的行四命令行的辅助操作快捷键键自动补齐清空至行首清空至行尾清屏中断命令执行后台挂起退出五中打包和压缩打包和压缩有什么区别归档也称为打包指的是一个文件或目录的集合而这个集合被储存在一个文件中归档文件没有经过压缩因此它占用的空间是其中所有文件和目录的总和压缩是指利用算法将文件进行处理已达到保留最大文件信息而让文件体积变小的目的其基本原理为通过查找文件内的重复字节建立一个相同字节的词典文件并用一个代码表示比如说在压缩文件中有不止一处出现了常用命令那么在压缩文件时这个词就会用一个代码表示并写入词典文件这样就可以实现缩小文件体积的目的打包命令命令是常用的归档打包命令该命令可以将许多文件一起保存到一个单独的归档文件不仅如此该命令还可以从归档文件中还原所需文件也就是打包的反过程称为解压打包使用命令归档的包通常称为包包文件都是以结尾基本格式如下选项源文件或目录选项源文件或目录打包压缩包解压包选项含义将多个文件或目录进行打包追加文件到归档文件包名指定包的文件名或者指定解压的包的包名包的拓展名是用来给管理员识别格式的所以一定要正确指定拓展名显示打包或解压包的具体过程对包做解压包操作只查看包中有哪些文件或目录不对包做解压包操作目录指定解压包位置压缩命令命令是常用的压缩命令基本格式如下选项源文件或源目标列表注意压缩命令需要手工指定压缩之后的压缩包名注意写清楚拓展名以便解压缩时使用选项含义递归压缩目录及将制定目录下的所有文件以及子目录全部压缩将文件压缩之后删除原始文件相当于把文件移到压缩文件中显示详细的压缩过程信息在压缩的时候不显示命令的执行过程压缩级别压缩级别是从的数字代表压缩速度更快代表压缩效果更好更新压缩文件即往压缩文件中添加新文件递归压缩目录及将制定目录下的所有文件以及子目录全部压缩解压缩命令命令可以查看和解压缩文件基本格式如下选项压缩包名选项含义目录名将压缩文件解压到指定目录下解压时并不覆盖已经存在的文件解压时覆盖已经存在的文件并且无需用户确认查看压缩文件的详细信息包括压缩文件中包含的文件大小文件名以及压缩比等但并不做解压操作测试压缩文件有无损坏但并不解压文件列表解压文件但不包含文件列表中指定的文件六编辑器的使用编辑器的安装在系统中安装编辑器需要注意的是此命令运行时有时需要手动确认如果需要省略手动输入过程可以用以下参数当安装完成我们输入以下命令即可启动文本编辑器命令模式进入便进入了命令模式此状态下敲击键盘会被识别为命令而非输入字符以下是常用的几个命令命令按键作用切换到输入模式以输入字符删除当前光标所在处的字符切换到底线命令模式以在最后一行输入命令输入模式在命令模式下按下就进入输入模式在输入模式中可以使用以下按键按键作用字符按键及组合输入字符回车键换行退格键删除光标前一个字符删除键删除光标后一个字符方向键在文本中移动光标移动光标到行首行尾上下翻页切换光标为输入替换模式退出输入模式切换到命令模式底线命令模式在命令模式下按英文冒号就进入了底线命令模式底线命令模式可以输入单个或多个字符命令在底线模式中基本命令有命令作用退出程序保存文件按键退出底线命令模式切换到命令模式如果想用建立一个文件名为的文件可以使用一般模式光标移动常用方法按键作用屏幕向下移动一页相当于按键常用屏幕向上移动一页相当于按键常用或者功能键屏幕向上移动一页相当于按键常用或者功能键移动到这一行的最后面字符处常用移动到这个档案的最后一行常用移动到这个档案的第一行常用为数字光标向下移动行常用一般模式下搜索替换指令说明搜索替换命令作用向光标之下寻找一个名称为的字符串常用向光标之上寻找一个名称为的字符串这个是英文按键代表重复前一个搜寻的动作这个是英文按键与刚好相反为反向进行前一个搜寻的动作与为数字在第与行之间寻找这个字符串并将该字符串取代为常用或从第一行到最后一行寻找字符串并将该字符串取代为常用或从第一行到最后一行寻找字符串并将该字符串取代为且在取代前显示提示字符给用户确认是否需要取代常用一般模式下删除复制与粘贴的常用方法删除复制与粘贴方法作用在一行字当中为向后删除一个字符相当于按键为向前删除一个字符相当于亦即是退格键常用删除光标所在的那一整行常用为数字删除光标所在的向下行例如则是删除行常用复制光标所在的那一行常用为数字复制光标所在向下行例如则是复制行常用为将已复制的数据在光标下一行粘贴上则为粘贴在光标上一行复原前一个动作常用重做上一个动作常用小数点意思是重复前一个动作的意思如果你想要重复删除重复粘贴等等动作按下小数点就好了常用一般模式切换到编辑模式的方法说明进入输入和取代模式方法作用进入输入模式为从目前光标所在处输入为在目前所在行的第一个非空格符处开始输入常用进入输入模式为从目前光标所在的下一个字符处开始输入为从光标所在行的最后一个字符处开始输入常用进入输入模式这是英文字母的大小写为在目前光标所在的下一行处输入新的一行为在目前光标所在处的上一行输入新的一行常用进入取代模式只会取代光标所在的那一个字符一次会一直取代光标所在的文字直到按下为止常用退出编辑模式回到一般模式中常用一般模式切换到命令行模式的指令说明及环境变量变更指令说明命令行存储离开指令作用将编辑的数据写入硬盘存档中常用若文件属性为只读时强制写入该档案不过到底能不能写入成功还是跟你对该档案的档案权限有关离开常用若曾修改过档案又不想储存使用为强制离开不储存档案储存后离开若为则为强制储存后离开常用将到的内容储存称这个档案暂时离开到命令行模式下执行的显示结果环境的变更作用显示行号设定之后会在每一行的前缀显示该行的行号与相反为取消行号',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-10-21 01:58:15',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://bu.dusays.com/2023/10/18/652ec6e6bfd3a.gif"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/" accesskey="h"><div class="title">L1uleeの万事屋</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/equipment/"><i class="anzhiyufont anzhiyu-icon-dice-d20 faa-tada" style="font-size: 0.9em;"></i><span> 我的装备</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" alt="微信" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" alt="支付宝" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/Hexo/" style="font-size: 1.05rem;">Hexo<sup>1</sup></a><a href="/tags/Linux/" style="font-size: 1.05rem;">Linux<sup>1</sup></a><a href="/tags/Tag-Plugins/" style="font-size: 1.05rem;">Tag Plugins<sup>1</sup></a><a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 1.05rem;">操作系统<sup>1</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/06/"><span class="card-archive-list-date">六月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/05/"><span class="card-archive-list-date">五月 2022</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item on" id="consoleCommentBarrage" onclick="anzhiyu.switchCommentBarrage()" title="热评开关"><a class="commentBarrage"><i class="anzhiyufont anzhiyu-icon-message"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/" itemprop="url">技术开发</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/Linux/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Linux</span></a><a class="article-meta__tags" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>操作系统</span></a></span></div></div><h1 class="post-title" itemprop="name headline">Linux基础命令</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2022-05-11T07:55:44.000Z" title="发表于 2022-05-11 15:55:44">2022-05-11</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2023-10-20T17:58:15.939Z" title="更新于 2023-10-21 01:58:15">2023-10-21</time></span></div><div class="meta-secondline"><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为北京"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>北京</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src=""></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="https://blog.2sec.io/2022/05/11/Linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/"><header><a class="post-meta-categories" href="/categories/%E6%8A%80%E6%9C%AF%E5%BC%80%E5%8F%91/" itemprop="url">技术开发</a><a href="/tags/Linux/" tabindex="-1" itemprop="url">Linux</a><a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" tabindex="-1" itemprop="url">操作系统</a><h1 id="CrawlerTitle" itemprop="name headline">Linux基础命令</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">L1ulee</span><time itemprop="dateCreated datePublished" datetime="2022-05-11T07:55:44.000Z" title="发表于 2022-05-11 15:55:44">2022-05-11</time><time itemprop="dateCreated datePublished" datetime="2023-10-20T17:58:15.939Z" title="更新于 2023-10-21 01:58:15">2023-10-21</time></header><h3 id="一、什么是Linux命令"><a href="#一、什么是Linux命令" class="headerlink" title="一、什么是Linux命令"></a>一、什么是Linux命令</h3><p>输入一串字符命令，由Shell将这条命令“翻译”为系统内核能够懂的“语言”，然后系统内核便根据这条命令去执行相关操作</p>
+<h3 id="什么是Shell？"><a href="#什么是Shell？" class="headerlink" title="什么是Shell？"></a>什么是Shell？</h3><ul>
+<li><p>Linux系统中运行的一种特殊程序</p>
+</li>
+<li><p>在用户和内核之间充当“翻译官”</p>
+<ul>
+<li>用户登录Linux系统时，自动加载一个Shell程序</li>
+</ul>
+</li>
+<li><p>Bash是Linux系统中默认使用的Shell程序</p>
+<p>文件位于&#x2F;bin&#x2F;bash目录下</p>
+<hr>
+<div class="mermaid-wrap"><pre class="mermaid-src" hidden>
+  graph TD
+User((用户)) --&gt;Shell{Shell}
+Shell --&gt;Kernel{内核}
+Kernel --&gt;Hardware{硬件}
+  </pre></div>
+
+<hr>
+</li>
+<li><p>接收用户输入的指令</p>
+<p>↓</p>
+</li>
+<li><p>解释命令</p>
+<p>↓</p>
+</li>
+<li><p>传递给系统内核执行</p>
+<hr>
+</li>
+</ul>
+<h3 id="二、命令提示符"><a href="#二、命令提示符" class="headerlink" title="二、命令提示符"></a>二、命令提示符</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">[root@localhost~]#</span></span><br></pre></td></tr></table></figure>
+
+<p>这是Linux系统的命令提示符，具体含义如下</p>
+<ul>
+<li>[]：这是提示符的分隔符号，没有特殊含义，方便查看。</li>
+<li>root：显示当前登录的用户名。</li>
+<li>@：分隔符号，没有特殊含义。</li>
+<li>localhost：当前系统的简写主机名（通过hostname命令查看完整主机名）。</li>
+<li>~：代表用户当前所在目录，此例中用户当前所在的目录是家(home)目录。</li>
+<li>#：命令提示符，Linux用这个符号标识登录的用户权限等级。超级用户提示符#，普通用户提示符$。</li>
+</ul>
+<h3 id="什么是家-home-目录？"><a href="#什么是家-home-目录？" class="headerlink" title="什么是家(home)目录？"></a>什么是家(home)目录？</h3><p>家目录又称主目录，用户登录后，要有一个初始登录位置，这个初始登录位置就称为用户的家目录。</p>
+<ul>
+<li>超级用户的家目录：&#x2F;root</li>
+<li>普通用户的家目录：&#x2F;home&#x2F;用户名</li>
+<li>用户在自己的家目录中拥有完整权限</li>
+</ul>
+<h3 id="三、Linux的常用命令"><a href="#三、Linux的常用命令" class="headerlink" title="三、Linux的常用命令"></a>三、Linux的常用命令</h3><h3 id="常用关机命令"><a href="#常用关机命令" class="headerlink" title="常用关机命令"></a>常用关机命令</h3><p>1、<code>poweroff</code> 	立刻关机		2、<code>halt</code> 	立刻关机(需要root权限)</p>
+<h3 id="init命令"><a href="#init命令" class="headerlink" title="init命令"></a>init命令</h3><p>1、init 0：关机</p>
+<p>2、init 3：纯文本模式</p>
+<p>3、init 5：图形模式</p>
+<p>4、init 6：重新启动</p>
+<h3 id="常用重启命令"><a href="#常用重启命令" class="headerlink" title="常用重启命令"></a>常用重启命令</h3><p><code>reboot</code> 	立刻重启</p>
+<h3 id="拓展命令"><a href="#拓展命令" class="headerlink" title="拓展命令"></a>拓展命令</h3><p><code>Shutdown [选项] 时间</code>  	计划关机</p>
+<table>
+<thead>
+<tr>
+<th align="center">选项</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">-c</td>
+<td align="center">取消前一个关机命令</td>
+</tr>
+<tr>
+<td align="center">-h</td>
+<td align="center">关机</td>
+</tr>
+<tr>
+<td align="center">-r</td>
+<td align="center">重启</td>
+</tr>
+</tbody></table>
+<p>示例：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]#shutdown -h now		立刻关机</span><br><span class="line">[root@localhost ~]#shutdown -h 10		十分钟后关机</span><br><span class="line">[root@localhost ~]#shutdown -h 11:11	11:11关机</span><br><span class="line"></span><br><span class="line">[root@localhost ~]#shutdown -r now		立刻重启</span><br><span class="line">[root@localhost ~]#shutdown -r 10		十分钟后关机</span><br><span class="line">[root@localhost ~]#shutdown -r 11:11	11:11重启</span><br></pre></td></tr></table></figure>
+
+<h3 id="切换路径命令"><a href="#切换路径命令" class="headerlink" title="切换路径命令"></a>切换路径命令</h3><p>cd是Change Directory的缩写，用来切换工作目录。</p>
+<p>基本格式如下：</p>
+<p><code>[root@localhost ~]#cd [相对路径或绝对路径]</code></p>
+<p>除此之外，cd命令后面可能跟一些特殊符号，表达含义如下：</p>
+<table>
+<thead>
+<tr>
+<th align="center">特殊符号</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">～</td>
+<td align="center">代表当前登录用户的主目录</td>
+</tr>
+<tr>
+<td align="center">～用户名</td>
+<td align="center">表示切换至指定用户的主目录</td>
+</tr>
+<tr>
+<td align="center">-</td>
+<td align="center">代表上次所在目录</td>
+</tr>
+<tr>
+<td align="center">.</td>
+<td align="center">代表当前目录(不会有路径变化)</td>
+</tr>
+<tr>
+<td align="center">..</td>
+<td align="center">代表上级目录</td>
+</tr>
+</tbody></table>
+<h3 id="打印工作目录命令"><a href="#打印工作目录命令" class="headerlink" title="打印工作目录命令"></a>打印工作目录命令</h3><p>pwd是Print Working Directory的缩写，用来在目录上显示当前目录的绝对路径。</p>
+<p>基本格式如下：</p>
+<p><code>[root@localhost ~]#pwd</code></p>
+<h3 id="显示目录内容命令"><a href="#显示目录内容命令" class="headerlink" title="显示目录内容命令"></a>显示目录内容命令</h3><p>ls是list的缩写是最常见的目录操作命令，其主要功能是显示当前目录下的内容。</p>
+<p>基本格式如下：</p>
+<p><code>[root@localhost ~]#ls [选项] 目录名</code></p>
+<p>具体选项有：-a、-A、-d、-f等。</p>
+<p>常用命令：</p>
+<p>1、ls -l</p>
+<p>2、ls -lR</p>
+<p>3、ls -lh</p>
+<h3 id="文件读写操作"><a href="#文件读写操作" class="headerlink" title="文件读写操作"></a>文件读写操作</h3><h3 id="新建文件夹命令"><a href="#新建文件夹命令" class="headerlink" title="新建文件夹命令"></a>新建文件夹命令</h3><p>mkdir是make directories的缩写，用户创建新目录，此命令所有用户都可使用。</p>
+<p>基本格式如下：</p>
+<p><code>[root@localhost ~]#mkdir [选项] 目录名</code></p>
+<p>具体选项有：</p>
+<table>
+<thead>
+<tr>
+<th align="center">选项</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">-p</td>
+<td align="center">递归创建所有目录</td>
+</tr>
+<tr>
+<td align="center">-m</td>
+<td align="center">选项自定义目录权限</td>
+</tr>
+</tbody></table>
+<h3 id="删除文件夹命令"><a href="#删除文件夹命令" class="headerlink" title="删除文件夹命令"></a>删除文件夹命令</h3><p>rmdir是remove empty directories的缩写，命令用于删除空目录，此命令所有用户都可使用。</p>
+<p>基本格式如下：</p>
+<p><code>[root@localhost ~]#rmdir [选项] 目录名</code></p>
+<p>具体选项有：</p>
+<table>
+<thead>
+<tr>
+<th align="center">选项</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">-p</td>
+<td align="center">递归删除所有空目录</td>
+</tr>
+</tbody></table>
+<p>因rmdir只能删除空目录，所以此命令不经常使用</p>
+<h3 id="新建文件命令"><a href="#新建文件命令" class="headerlink" title="新建文件命令"></a>新建文件命令</h3><p>touch命令是用于用户创建新文件，并且此命令可以修改文件的时间参数(当文件存在时)。</p>
+<p>Linux系统中，每个文件主要拥有3个时间参数(通过stat命令进行查看	)，分别是文件的访问时间、数据修改时间以及状态修改时间：</p>
+<ul>
+<li>访问时间(Access Time，简称atime)：只要文件的内容被读取，访问时间就会更新。</li>
+<li>数据修改时间(Modify Time，简称mtime)：当文件的内容数据发生改变，数据修改时间就会跟着相应改变。</li>
+<li>状态修改时间(Change Time，简称ctime)：当文件的状态发生变化，就会相应改变这个时间。</li>
+</ul>
+<p>基本格式如下：</p>
+<p><code>[root@localhost ~]#touch [选项] 文件名</code></p>
+<p>具体选项有：</p>
+<table>
+<thead>
+<tr>
+<th align="center">选项</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">-a</td>
+<td align="center">只修改文件的访问时间</td>
+</tr>
+<tr>
+<td align="center">-c</td>
+<td align="center">仅修改文件的时间参数(3个时间参数都改变)，如果文件不存在，则不信建立文件</td>
+</tr>
+<tr>
+<td align="center">-d</td>
+<td align="center">后面可以跟欲修订的日期，只修改访问时间和数据修改时间，状态修改时间变更为当前服务器时间</td>
+</tr>
+<tr>
+<td align="center">-m</td>
+<td align="center">只修改文件的数据修改时间</td>
+</tr>
+<tr>
+<td align="center">-t</td>
+<td align="center">后面可跟欲修订时间，书写格式：YYMMDDhhmm</td>
+</tr>
+</tbody></table>
+<h3 id="删除命令"><a href="#删除命令" class="headerlink" title="删除命令"></a>删除命令</h3><p>rm命令是remove的缩写，用于用户永久性的删除文件或者目录，在使用rm命令删除文件或目录时，系统不会产生任何提示信息。</p>
+<p>基本格式如下：</p>
+<p><code>[root@localhost ~]#rm [选项] 文件或目录</code></p>
+<p>具体选项有：</p>
+<table>
+<thead>
+<tr>
+<th align="center">选项</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">-f</td>
+<td align="center">强制删除，和-i选项相反，使用-f系统不再询问，直接删除目标</td>
+</tr>
+<tr>
+<td align="center">-i</td>
+<td align="center">在删除文件或者目录前，系统会给出提示信息，防止用户误删</td>
+</tr>
+<tr>
+<td align="center">-r</td>
+<td align="center">递归删除，主要用户删除目录，可删除指定目录及包含所有内容，包括子目录和文件</td>
+</tr>
+</tbody></table>
+<div class="note warning modern"><p>注意：rm命令是一个具有破坏性的命令，因为rm命令会永久性的删除文件或目录，这就意味着，如果没有对文件或目录进行备份，一旦使用rm命令将其删除，将无法恢复，除非依赖第三方的数据恢复工具。</p>
+</div>
+
+<h3 id="复制命令"><a href="#复制命令" class="headerlink" title="复制命令"></a>复制命令</h3><p>cp命令是copy的缩写，用于文件或目录的拷贝。</p>
+<p>基本格式如下：</p>
+<p><code>[root@localhost ~]#cp [选项] 源文件 目标文件</code></p>
+<p>具体格式如下：</p>
+<table>
+<thead>
+<tr>
+<th align="center">选项</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">-a</td>
+<td align="center">相当于-d、-p、-r选项的集合</td>
+</tr>
+<tr>
+<td align="center">-d</td>
+<td align="center">如果源文件为软链接(对硬链接无效)，则复制出的目标文件也为软连接</td>
+</tr>
+<tr>
+<td align="center">-i</td>
+<td align="center">询问，如果目标文件已经存在，则会询问是否覆盖</td>
+</tr>
+<tr>
+<td align="center">-l</td>
+<td align="center">把目标文件建立为源文件的硬链接文件，而不是复制源文件</td>
+</tr>
+<tr>
+<td align="center">-s</td>
+<td align="center">把目标文件建立为源文件的软链接文件，而不是复制源文件</td>
+</tr>
+<tr>
+<td align="center">-p</td>
+<td align="center">复制后的目标文件保留源文件的属性(包括所有者、所属组、权限和时间)</td>
+</tr>
+<tr>
+<td align="center">-r</td>
+<td align="center">递归复制，用于复制目录</td>
+</tr>
+<tr>
+<td align="center">-u</td>
+<td align="center">若目标文件比源文件有差异，则使用该选项可以更新目标文件，此选项可用于对文件的升级和备份</td>
+</tr>
+</tbody></table>
+<h3 id="移动命令"><a href="#移动命令" class="headerlink" title="移动命令"></a>移动命令</h3><p>mv命令是move的缩写，用于目录或文件的移动，在移动中可以对文件或者目录进行重命名。</p>
+<p>基本格式如下：</p>
+<p><code>[root@localhost ~]#mv [选项] 源文件 目标文件</code></p>
+<p>具体选项有：</p>
+<table>
+<thead>
+<tr>
+<th align="center">选项</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">-f</td>
+<td align="center">强制覆盖，如果目标文件已经存在，则不询问，直接强制覆盖</td>
+</tr>
+<tr>
+<td align="center">-i</td>
+<td align="center">交互移动，如果目标文件已经存在，则询问用户是否覆盖(默认选项)</td>
+</tr>
+<tr>
+<td align="center">-n</td>
+<td align="center">如果目标文件已经存在，则不会覆盖移动，而且不询问用户</td>
+</tr>
+<tr>
+<td align="center">-v</td>
+<td align="center">显示文件或目录的移动过程</td>
+</tr>
+<tr>
+<td align="center">-u</td>
+<td align="center">若目标文件已经存在，但两者相比，源文件更新，则会对目标文件进行升级</td>
+</tr>
+</tbody></table>
+<div class="note warning modern"><p>注意：同rm命令相似，mv命令也是一个具有破坏性的命令，如果使用不当，很可能给系统带来灾难性的后果。</p>
+</div>
+
+<h3 id="显示文件内容命令"><a href="#显示文件内容命令" class="headerlink" title="显示文件内容命令"></a>显示文件内容命令</h3><p>cat是concatenate(链接、连续)的简写，用来显示文本文件的内容(类似于DOS下的type命令)，也可以把几个文件内容附加到另一个文件中，即连接合并文件。</p>
+<p>基本格式如下：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]#mv [选项] 文件名</span><br><span class="line">[root@localhost ~]#mv 文件1 文件2 &gt; 文件3</span><br></pre></td></tr></table></figure>
+
+<p>具体选项有：</p>
+<table>
+<thead>
+<tr>
+<th align="center">选项</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">-a</td>
+<td align="center">相当于-vET选项的整合，用于列出所有隐藏符号</td>
+</tr>
+<tr>
+<td align="center">-E</td>
+<td align="center">列出每行结尾的回车符$</td>
+</tr>
+<tr>
+<td align="center">-n</td>
+<td align="center">对输出的所有行进行编号</td>
+</tr>
+<tr>
+<td align="center">-b</td>
+<td align="center">同-n不同，此选项表示只对非空行进行编号</td>
+</tr>
+<tr>
+<td align="center">-T</td>
+<td align="center">把Tab键^I显示出来</td>
+</tr>
+<tr>
+<td align="center">-V</td>
+<td align="center">列出特殊字符</td>
+</tr>
+<tr>
+<td align="center">-s</td>
+<td align="center">当遇到有连续2行以上的空白行时，就替换为1行的空白行</td>
+</tr>
+</tbody></table>
+<div class="note warning modern"><p>注意：cat命令适合查看不太大的文件。当然，在Linux中是可以使用其他的命令或方法来查看大文件的。</p>
+</div>
+
+<hr>
+<p>more命令是可以分页显示文本文件的内容，使用者可以逐页阅读文件中内容。</p>
+<p>基本格式如下：</p>
+<p><code>[root@localhost ~]#more [选项] 文件名</code></p>
+<table>
+<thead>
+<tr>
+<th align="center">选项</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">-f</td>
+<td align="center">计算行数时，以实际的行数，而不是自动换行过后的字数</td>
+</tr>
+<tr>
+<td align="center">-p</td>
+<td align="center">不以卷动的方式显示每一页，而是先清除屏幕后再显示内容</td>
+</tr>
+<tr>
+<td align="center">-c</td>
+<td align="center">跟-p选项相似，不同的是先显示内容再清除其他旧资料</td>
+</tr>
+<tr>
+<td align="center">-s</td>
+<td align="center">当遇到有连续两行以上的空白行时，就替换为一行的空白行</td>
+</tr>
+<tr>
+<td align="center">-u</td>
+<td align="center">不显示下引号(根据环境变量TERM指定的终端而有所不同)</td>
+</tr>
+<tr>
+<td align="center">+n</td>
+<td align="center">从第n行开始显示文件内容，n代表数字</td>
+</tr>
+</tbody></table>
+<p><strong>More命令交互指令集功能表</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">交互命令</th>
+<th align="center">功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">h或?</td>
+<td align="center">显示more命令交互命令帮助</td>
+</tr>
+<tr>
+<td align="center">q或Q</td>
+<td align="center">退出more</td>
+</tr>
+<tr>
+<td align="center">v</td>
+<td align="center">在当前行启动一个编辑器</td>
+</tr>
+<tr>
+<td align="center">:f</td>
+<td align="center">显示当前文件的文件名和行号</td>
+</tr>
+<tr>
+<td align="center">!&lt;命令&gt;或:1&lt;命令&gt;</td>
+<td align="center">在子Shell中执行指定命令</td>
+</tr>
+<tr>
+<td align="center">回车键</td>
+<td align="center">向下移动一行</td>
+</tr>
+<tr>
+<td align="center">空格键</td>
+<td align="center">向下移动一页</td>
+</tr>
+<tr>
+<td align="center"><kbd>Ctrl</kbd> + <kbd>l</kbd></td>
+<td align="center">刷新屏幕</td>
+</tr>
+<tr>
+<td align="center">&#x3D;</td>
+<td align="center">显示当前行的行号</td>
+</tr>
+<tr>
+<td align="center">‘</td>
+<td align="center">转到上一次搜索开始的地方</td>
+</tr>
+<tr>
+<td align="center"><kbd>Ctrl</kbd> + <kbd>f</kbd></td>
+<td align="center">向下滚动一页</td>
+</tr>
+<tr>
+<td align="center">.</td>
+<td align="center">重复上次输入的命令</td>
+</tr>
+<tr>
+<td align="center">&#x2F;字符串</td>
+<td align="center">搜索指定的字符串</td>
+</tr>
+<tr>
+<td align="center">d</td>
+<td align="center">向下移动半页</td>
+</tr>
+<tr>
+<td align="center">b</td>
+<td align="center">向上移动一页</td>
+</tr>
+</tbody></table>
+<p>head命令是显示指定文件前若干行的文件内容。</p>
+<p>具体格式如下：</p>
+<p><code>[root@localhost ~]#head [选项] 文件名</code></p>
+<table>
+<thead>
+<tr>
+<th align="center">选项</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">-n K</td>
+<td align="center">这里的K表示行数，该选项用来显示文件前K行的内容;如果使用”-K”作为参数，则表示除了文件最后K行外，显示剩余的全部内容</td>
+</tr>
+<tr>
+<td align="center">-c K</td>
+<td align="center">这里的K表示字节数，该选项用来显示文件前K个字节的内容;如果使用”-K”，则表示除了文件最后K字节的内容，显示剩余全部内容</td>
+</tr>
+<tr>
+<td align="center">-v</td>
+<td align="center">显示文件名</td>
+</tr>
+</tbody></table>
+<div class="note warning modern"><p>注意：如不设置显示的具体行数，则默认显示10行的文本数据。</p>
+</div>
+
+<p>tail命令正好和head相反，它用来查看文件末尾的数据。</p>
+<p>基本格式如下：</p>
+<p><code>[root@localhost ~]#tail [选项] 文件名</code></p>
+<table>
+<thead>
+<tr>
+<th align="center">选项</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">-n K</td>
+<td align="center">这里的K指的是行数，该选项表示输出最后K行，在此基础上，如果使用-n+K，则表示从文件的第K行开始输出</td>
+</tr>
+<tr>
+<td align="center">-c K</td>
+<td align="center">这里的K指的是字节数，该选项表示输出最后K字节的内容，在此基础上，使用-c+K则表示从文件的第K个字节开始输出</td>
+</tr>
+<tr>
+<td align="center">-f</td>
+<td align="center">输出文件变化后新增加的数据</td>
+</tr>
+</tbody></table>
+<div class="note warning modern"><p>注意：-f命令会显示文件的最后10行内容，而且光标不会退出命令，每隔一秒会检查一下文件是否增加新的内容，如果增加就追加到原来的输出结果后面并显示。</p>
+</div>
+
+<h3 id="文件查找命令"><a href="#文件查找命令" class="headerlink" title="文件查找命令"></a>文件查找命令</h3><p>find命令是在目录结构中搜索文件，并执行指定的操作。find命令提供相当多的查找条件，功能很强大。即使系统中含有网络文件系统，find命令在该文件系统中同样有效。在运行一个非常消耗资源的find命令时，很多人都倾向于把它放在后台执行，因为遍历一个大的文件系统可能会花费很长的时间。</p>
+<p>基本格式如下：</p>
+<p><code>[root@localhost ~]#find [路径] [选项] [输出格式]</code></p>
+<table>
+<thead>
+<tr>
+<th align="center">路径</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">~</td>
+<td align="center">表示$HOME目录</td>
+</tr>
+<tr>
+<td align="center">.</td>
+<td align="center">表示当前目录</td>
+</tr>
+<tr>
+<td align="center">&#x2F;</td>
+<td align="center">表示根目录</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">选项</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">-name</td>
+<td align="center">按照名字查找</td>
+</tr>
+<tr>
+<td align="center">-perm</td>
+<td align="center">安装权限查找</td>
+</tr>
+<tr>
+<td align="center">-prune</td>
+<td align="center">不在当前指定的目录下查找</td>
+</tr>
+<tr>
+<td align="center">-user</td>
+<td align="center">文件(所)属主来查找</td>
+</tr>
+<tr>
+<td align="center">-group</td>
+<td align="center">文件所在(所)属组来查找</td>
+</tr>
+<tr>
+<td align="center">-nogroup</td>
+<td align="center">查找无有效所属组的文件</td>
+</tr>
+<tr>
+<td align="center">-nouser</td>
+<td align="center">查找无有效所属主的文件</td>
+</tr>
+<tr>
+<td align="center">-type</td>
+<td align="center">按照文件类型查找</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">输出格式</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">print</td>
+<td align="center">表示将结果输出到标准输出</td>
+</tr>
+<tr>
+<td align="center">exec</td>
+<td align="center">对匹配的文件执行该参数所给出的shell命令。形式为<code>command&#123;&#125; \\;</code>，<strong>注意：{}和;之间有空格</strong></td>
+</tr>
+<tr>
+<td align="center">ok</td>
+<td align="center">与exec作用相同，区别在于，在执行命令之前，都会给出提示，让用户确认是否执行</td>
+</tr>
+</tbody></table>
+<h3 id="内容查找命令"><a href="#内容查找命令" class="headerlink" title="内容查找命令"></a>内容查找命令</h3><p>grep命令时global regular expressions print的缩写，grep命令是用来在每一个文件或中(或特定输出上)搜索特定的模式，当使用grep时，包含指定字符模式的每一行内容，都会被打印(显示)到屏幕上，但是使用grep命令并不改变文件中的内容。</p>
+<p>基本格式如下：</p>
+<p><code>[root@localhost ~]#grep [选项] [模式] 文件名</code></p>
+<div class="note warning modern"><p>注意：基本格式中的模式要么是字符(串)，要么是正则表达式。</p>
+</div>
+
+<table>
+<thead>
+<tr>
+<th align="center">选项</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">-c</td>
+<td align="center">仅列出文件中包含模式的行数</td>
+</tr>
+<tr>
+<td align="center">-i</td>
+<td align="center">忽略模式中的字母大小写</td>
+</tr>
+<tr>
+<td align="center">-l</td>
+<td align="center">列出带有匹配行的文件名</td>
+</tr>
+<tr>
+<td align="center">-n</td>
+<td align="center">在每一行的最前面列出行号</td>
+</tr>
+<tr>
+<td align="center">-v</td>
+<td align="center">列出没有匹配模式的行</td>
+</tr>
+<tr>
+<td align="center">-w</td>
+<td align="center">把表达式当做一个完整的单字符来搜寻，忽略那些部分匹配的行</td>
+</tr>
+</tbody></table>
+<div class="note warning modern"><p>注意：如果是搜索多个文件，grep命令的搜索结果只显示文件中发现匹配模式的文件名;而如果搜索单个文件，grep命令的结果将显示每一个包含匹配模式的行。</p>
+</div>
+
+<h3 id="四、Linux命令行的辅助操作"><a href="#四、Linux命令行的辅助操作" class="headerlink" title="四、Linux命令行的辅助操作"></a>四、Linux命令行的辅助操作</h3><h3 id="快捷键："><a href="#快捷键：" class="headerlink" title="快捷键："></a>快捷键：</h3><kbd>Tab</kbd>键：自动补齐
+
+
+
+<kbd>Ctrl</kbd> + <kbd>U</kbd>：清空至行首
+
+
+
+<kbd>Ctrl</kbd> + <kbd>K</kbd>：清空至行尾
+
+
+
+<kbd>Ctrl</kbd> + <kbd>L</kbd>：清屏
+
+
+
+<kbd>Ctrl</kbd> + <kbd>C</kbd>：中断命令执行
+
+
+
+<kbd>Ctrl</kbd> + <kbd>Z</kbd>：后台挂起
+
+
+
+<kbd>Ctrl</kbd> + <kbd>D</kbd>：退出Shell
+
+<h3 id="五、Linux中打包和压缩"><a href="#五、Linux中打包和压缩" class="headerlink" title="五、Linux中打包和压缩"></a>五、Linux中打包和压缩</h3><h5 id="打包和压缩有什么区别："><a href="#打包和压缩有什么区别：" class="headerlink" title="打包和压缩有什么区别："></a>打包和压缩有什么区别：</h5><ul>
+<li><strong>归档：</strong>也称为打包，指的是一个文件或目录的集合，而这个集合被储存在一个文件中。归档文件没有经过压缩，因此，它占用的空间是其中所有文件和目录的总和。</li>
+<li><strong>压缩：</strong>是指利用算法将文件进行处理，已达到保留最大文件信息，而让文件体积变小的目的。其基本原理为，通过查找文件内的重复字节，建立一个相同字节的词典文件，并用一个代码表示。比如说，在压缩文件中，有不止一处出现了”Linux常用命令”，那么，在压缩文件时，这个词就会用一个代码表示并写入词典文件，这样就可以实现缩小文件体积的目的。</li>
+</ul>
+<h3 id="打包命令"><a href="#打包命令" class="headerlink" title="打包命令"></a>打包命令</h3><p>tar命令是常用的归档(打包)命令，该命令可以将许多文件一起保存到一个单独的归档文件。不仅如此，该命令还可以从归档文件中还原所需文件，也就是打包的反过程，称为解(压)打包。使用tar命令归档的包通常称为tar包，tar包文件都是以”.tar”结尾。</p>
+<p>基本格式如下：</p>
+<p><code>[root@localhost ~]#tar [选项] 源文件或目录</code><br><code>[root@localhost ~]#tar [选项] 源文件或目录(打包)/压缩包(解压包)</code></p>
+<table>
+<thead>
+<tr>
+<th align="center">选项</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">-c</td>
+<td align="center">将多个文件或目录进行打包</td>
+</tr>
+<tr>
+<td align="center">-A</td>
+<td align="center">追加tar文件到归档文件</td>
+</tr>
+<tr>
+<td align="center">-f 包名</td>
+<td align="center">指定包的文件名或者指定解压的tar包的包名。包的拓展名是用来给管理员识别格式的，所以一定要正确指定拓展名。</td>
+</tr>
+<tr>
+<td align="center">-v</td>
+<td align="center">显示打包或解压包的具体过程</td>
+</tr>
+<tr>
+<td align="center">-x</td>
+<td align="center">对tar包做解压包操作</td>
+</tr>
+<tr>
+<td align="center">-t</td>
+<td align="center">只查看tar包中有哪些文件或目录，不对tar包做解压包操作</td>
+</tr>
+<tr>
+<td align="center">-C 目录</td>
+<td align="center">指定解压包位置</td>
+</tr>
+</tbody></table>
+<h3 id="压缩命令"><a href="#压缩命令" class="headerlink" title="压缩命令"></a>压缩命令</h3><p>zip命令是常用的压缩命令。</p>
+<p>基本格式如下：</p>
+<p><code>[root@localhost ~]#zip [选项] 源文件或源目标列表</code></p>
+<div class="note warning modern"><p>注意：zip压缩命令需要手工指定压缩之后的压缩包名，注意写清楚拓展名，以便解压缩时使用。</p>
+</div>
+
+<table>
+<thead>
+<tr>
+<th align="center">选项</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">-r</td>
+<td align="center">递归压缩目录，及将制定目录下的所有文件以及子目录全部压缩</td>
+</tr>
+<tr>
+<td align="center">-m</td>
+<td align="center">将文件压缩之后，删除原始文件，相当于把文件移到压缩文件中</td>
+</tr>
+<tr>
+<td align="center">-v</td>
+<td align="center">显示详细的压缩过程信息</td>
+</tr>
+<tr>
+<td align="center">-q</td>
+<td align="center">在压缩的时候不显示命令的执行过程</td>
+</tr>
+<tr>
+<td align="center">-压缩级别</td>
+<td align="center">压缩级别是从1~9的数字，-1代表压缩速度更快，-9代表压缩效果更好</td>
+</tr>
+<tr>
+<td align="center">-u</td>
+<td align="center">更新压缩文件，即往压缩文件中添加新文件</td>
+</tr>
+<tr>
+<td align="center">-r</td>
+<td align="center">递归压缩目录，及将制定目录下的所有文件以及子目录全部压缩</td>
+</tr>
+</tbody></table>
+<h3 id="解压缩命令"><a href="#解压缩命令" class="headerlink" title="解压缩命令"></a>解压缩命令</h3><p>unzip命令可以查看和解压缩zip文件。</p>
+<p>基本格式如下：</p>
+<p><code>[root@localhost ~]#unzip [选项] 压缩包名</code></p>
+<table>
+<thead>
+<tr>
+<th align="center">选项</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">-d 目录名</td>
+<td align="center">将压缩文件解压到指定目录下</td>
+</tr>
+<tr>
+<td align="center">-n</td>
+<td align="center">解压时并不覆盖已经存在的文件</td>
+</tr>
+<tr>
+<td align="center">-o</td>
+<td align="center">解压时覆盖已经存在的文件，并且无需用户确认</td>
+</tr>
+<tr>
+<td align="center">-v</td>
+<td align="center">查看压缩文件的详细信息，包括压缩文件中包含的文件大小、文件名以及压缩比等，但并不做解压操作</td>
+</tr>
+<tr>
+<td align="center">-t</td>
+<td align="center">测试压缩文件有无损坏，但并不解压</td>
+</tr>
+<tr>
+<td align="center">-x 文件列表</td>
+<td align="center">解压文件，但不包含文件列表中指定的文件</td>
+</tr>
+</tbody></table>
+<h3 id="六、Vi-Vim编辑器的使用"><a href="#六、Vi-Vim编辑器的使用" class="headerlink" title="六、Vi&#x2F;Vim编辑器的使用"></a>六、Vi&#x2F;Vim编辑器的使用</h3><h3 id="Vim编辑器的安装"><a href="#Vim编辑器的安装" class="headerlink" title="Vim编辑器的安装"></a>Vim编辑器的安装</h3><p>在Linux系统中安装Vim编辑器</p>
+<p><code>[root@localhost ~]#yum install vim</code></p>
+<div class="note info simple"><p>需要注意的是，此命令运行时，有时需要手动确认[y&#x2F;n]，如果需要省略手动输入”y”过程，可以用以下参数：</p>
+</div>
+
+<p><code>[root@localhost ~]#yum -y install vim</code></p>
+<p>当安装完成，我们输入以下命令即可启动Vim文本编辑器</p>
+<p><code>[root@localhost ~]#vim</code></p>
+<h3 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h3><p>进入Vi&#x2F;Vim便进入了命令模式。此状态下敲击键盘会被VIM识别为命令，而非输入字符。</p>
+<p>以下是常用的几个命令：</p>
+<table>
+<thead>
+<tr>
+<th align="center">命令&#x2F;按键</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><kbd>l</kbd></td>
+<td align="center">切换到输入模式，以输入字符</td>
+</tr>
+<tr>
+<td align="center"><kbd>x</kbd></td>
+<td align="center">删除当前光标所在处的字符</td>
+</tr>
+<tr>
+<td align="center"><kbd>:</kbd></td>
+<td align="center">切换到底线命令模式，以在最后一行输入命令</td>
+</tr>
+</tbody></table>
+<h3 id="输入模式"><a href="#输入模式" class="headerlink" title="输入模式"></a>输入模式</h3><p>在命令模式下按下i就进入输入模式。在输入模式中，可以使用以下按键：</p>
+<table>
+<thead>
+<tr>
+<th align="center">按键</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">字符按键及Shift组合</td>
+<td align="center">输入字符</td>
+</tr>
+<tr>
+<td align="center"><kbd>ENTER</kbd></td>
+<td align="center">回车键，换行</td>
+</tr>
+<tr>
+<td align="center"><kbd>BACKSPACE</kbd></td>
+<td align="center">退格键，删除光标前一个字符</td>
+</tr>
+<tr>
+<td align="center"><kbd>DEL</kbd></td>
+<td align="center">删除键，删除光标后一个字符</td>
+</tr>
+<tr>
+<td align="center">方向键</td>
+<td align="center">在文本中移动光标</td>
+</tr>
+<tr>
+<td align="center"><kbd>HOME</kbd>&#x2F;<kbd>END</kbd></td>
+<td align="center">移动光标到行首&#x2F;行尾</td>
+</tr>
+<tr>
+<td align="center"><kbd>PageUP</kbd>&#x2F;<kbd>PageDOWN</kbd></td>
+<td align="center">上&#x2F;下翻页</td>
+</tr>
+<tr>
+<td align="center"><kbd>INSERT</kbd></td>
+<td align="center">切换光标为输入&#x2F;替换模式</td>
+</tr>
+<tr>
+<td align="center"><kbd>ESC</kbd></td>
+<td align="center">退出输入模式，切换到命令模式</td>
+</tr>
+</tbody></table>
+<h3 id="底线命令模式"><a href="#底线命令模式" class="headerlink" title="底线命令模式"></a>底线命令模式</h3><p>在命令模式下按:(英文冒号)就进入了底线命令模式。底线命令模式可以输入单个或多个字符命令。在底线模式中，基本命令有：</p>
+<table>
+<thead>
+<tr>
+<th align="center">命令</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">q</td>
+<td align="center">退出程序</td>
+</tr>
+<tr>
+<td align="center">w</td>
+<td align="center">保存文件</td>
+</tr>
+<tr>
+<td align="center"><kbd>ESC</kbd>按键</td>
+<td align="center">退出底线命令模式，切换到命令模式</td>
+</tr>
+</tbody></table>
+<p>如果想用Vim建立一个文件名为01.txt的文件，可以使用：</p>
+<p><code>[root@localhost ~]#vim 01.txt</code></p>
+<h3 id="一般模式光标移动常用方法"><a href="#一般模式光标移动常用方法" class="headerlink" title="一般模式光标移动常用方法"></a>一般模式光标移动常用方法</h3><table>
+<thead>
+<tr>
+<th align="center">按键</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><kbd>Ctrl</kbd> + <kbd>F</kbd></td>
+<td align="center">屏幕『向下』移动一页，相当于<kbd>PageDOWN</kbd>按键(常用)</td>
+</tr>
+<tr>
+<td align="center"><kbd>Ctrl</kbd> + <kbd>B</kbd></td>
+<td align="center">屏幕『向上』移动一页，相当于<kbd>PageUP</kbd>按键(常用)</td>
+</tr>
+<tr>
+<td align="center"><kbd>0</kbd> 或者功能键 <kbd>HOME</kbd></td>
+<td align="center">屏幕『向上』移动一页，相当于<kbd>PageUP</kbd>按键(常用)</td>
+</tr>
+<tr>
+<td align="center"><kbd>¥</kbd> 或者功能键 <kbd>END</kbd></td>
+<td align="center">移动到这一行的最后面字符处(常用)</td>
+</tr>
+<tr>
+<td align="center"><kbd>G</kbd></td>
+<td align="center">移动到这个档案的最后一行(常用)</td>
+</tr>
+<tr>
+<td align="center"><kbd>gg</kbd></td>
+<td align="center">移动到这个档案的第一行(常用)</td>
+</tr>
+<tr>
+<td align="center">n&lt;<kbd>ENTER</kbd>&gt;</td>
+<td align="center">n为数字。光标向下移动n行(常用)</td>
+</tr>
+</tbody></table>
+<h3 id="一般模式下搜索替换指令说明"><a href="#一般模式下搜索替换指令说明" class="headerlink" title="一般模式下搜索替换指令说明"></a>一般模式下搜索替换指令说明</h3><table>
+<thead>
+<tr>
+<th align="center">搜索替换命令</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">&#x2F;word</td>
+<td align="center">向光标之下寻找一个名称为word的字符串(常用)</td>
+</tr>
+<tr>
+<td align="center">?word</td>
+<td align="center">向光标之上寻找一个名称为word的字符串</td>
+</tr>
+<tr>
+<td align="center">n</td>
+<td align="center">这个n是英文按键。代表重复前一个搜寻的动作</td>
+</tr>
+<tr>
+<td align="center">N</td>
+<td align="center">这个N是英文按键。与n刚好相反，为『反向』进行前一个搜寻的动作</td>
+</tr>
+<tr>
+<td align="center">:n1,n2s&#x2F;word1&#x2F;word2&#x2F;g</td>
+<td align="center">n1与n2为数字。在第n1与n2行之间寻找word1这个字符串，并将该字符串取代为word2(常用)</td>
+</tr>
+<tr>
+<td align="center">:1,$s&#x2F;word1&#x2F;word2&#x2F;g或:%s&#x2F;word1&#x2F;word2&#x2F;g</td>
+<td align="center">从第一行到最后一行寻找word1字符串，并将该字符串取代为word2(常用)</td>
+</tr>
+<tr>
+<td align="center">:1,$s&#x2F;word1&#x2F;word2&#x2F;gc或:%s&#x2F;word1&#x2F;word2&#x2F;gc</td>
+<td align="center">从第一行到最后一行寻找word1字符串，并将该字符串取代为word2，且在取代前显示提示字符给用户确认(Confirm)是否需要取代(常用)</td>
+</tr>
+</tbody></table>
+<h3 id="一般模式下删除、复制与粘贴的常用方法"><a href="#一般模式下删除、复制与粘贴的常用方法" class="headerlink" title="一般模式下删除、复制与粘贴的常用方法"></a>一般模式下删除、复制与粘贴的常用方法</h3><table>
+<thead>
+<tr>
+<th align="center">删除、复制与粘贴方法</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><kbd>x</kbd>,<kbd>X</kbd></td>
+<td align="center">在一行字当中，x为向后删除一个字符(相当于<kbd>DEL</kbd>按键)，X为向前删除一个字符(相当于<kbd>BACKSPACE</kbd>亦即是退格键)(常用)</td>
+</tr>
+<tr>
+<td align="center"><kbd>dd</kbd></td>
+<td align="center">删除光标所在的那一整行(常用)</td>
+</tr>
+<tr>
+<td align="center">n<kbd>dd</kbd></td>
+<td align="center">n为数字。删除光标所在的向下n行，例如20dd则是删除 20行(常用)</td>
+</tr>
+<tr>
+<td align="center"><kbd>yy</kbd></td>
+<td align="center">复制光标所在的那一行(常用)</td>
+</tr>
+<tr>
+<td align="center">n<kbd>yy</kbd></td>
+<td align="center">n为数字。复制光标所在向下n行，例如20yy则是复制20行(常用)</td>
+</tr>
+<tr>
+<td align="center"><kbd>p</kbd>,<kbd>P</kbd></td>
+<td align="center">p为将已复制的数据在光标下一行粘贴上，P则为粘贴在光标上一行</td>
+</tr>
+<tr>
+<td align="center"><kbd>u</kbd></td>
+<td align="center">复原前一个动作(常用)</td>
+</tr>
+<tr>
+<td align="center"><kbd>Ctrl</kbd> + <kbd>r</kbd></td>
+<td align="center">重做上一个动作(常用)</td>
+</tr>
+<tr>
+<td align="center"><kbd>.</kbd></td>
+<td align="center">小数点，意思是重复前一个动作的意思。如果你想要重复删除、重复粘贴等等动作，按下小数点<kbd>.</kbd>就好了(常用)</td>
+</tr>
+</tbody></table>
+<h3 id="一般模式切换到编辑模式的方法说明"><a href="#一般模式切换到编辑模式的方法说明" class="headerlink" title="一般模式切换到编辑模式的方法说明"></a>一般模式切换到编辑模式的方法说明</h3><table>
+<thead>
+<tr>
+<th align="center">进入输入和取代模式方法</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><kbd>i</kbd>,<kbd>I</kbd></td>
+<td align="center">进入输入模式(Insert mode)：<kbd>i</kbd>为『从目前光标所在处输入』，<kbd>I</kbd>为『在目前所在行的第一个非空格符处开始输入』(常用)</td>
+</tr>
+<tr>
+<td align="center"><kbd>a</kbd>,<kbd>A</kbd></td>
+<td align="center">进入输入模式(Insert mode)：<kbd>a</kbd>为『从目前光标所在的下一个字符处开始输入』，<kbd>A</kbd>为『从光标所在行的最后一个字符处开始输入』(常用)</td>
+</tr>
+<tr>
+<td align="center"><kbd>o</kbd>,<kbd>O</kbd></td>
+<td align="center">进入输入模式(Insert mode)：这是英文字母o的大小写。<kbd>o</kbd>为『在目前光标所在的下一行处输入新的一行』，<kbd>O</kbd>为『在目前光标所在处的上一行输入新的一行』(常用)</td>
+</tr>
+<tr>
+<td align="center"><kbd>r</kbd>,<kbd>R</kbd></td>
+<td align="center">进入取代模式(Replace mode)：r只会取代光标所在的那一个字符一次，R会一直取代光标所在的文字，直到按下<kbd>ESC</kbd>为止(常用)</td>
+</tr>
+<tr>
+<td align="center"><kbd>ESC</kbd></td>
+<td align="center">退出编辑模式，回到一般模式中(常用)</td>
+</tr>
+</tbody></table>
+<h3 id="一般模式切换到命令行模式的指令说明及Vim环境变量变更指令说明"><a href="#一般模式切换到命令行模式的指令说明及Vim环境变量变更指令说明" class="headerlink" title="一般模式切换到命令行模式的指令说明及Vim环境变量变更指令说明"></a>一般模式切换到命令行模式的指令说明及Vim环境变量变更指令说明</h3><table>
+<thead>
+<tr>
+<th align="center">命令行存储、离开指令</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">:w</td>
+<td align="center">将编辑的数据写入硬盘存档中(常用)</td>
+</tr>
+<tr>
+<td align="center">:w!</td>
+<td align="center">若文件属性为『只读』时，强制写入该档案。不过，到底能不能写入成功，还是跟你对该档案的档案权限有关</td>
+</tr>
+<tr>
+<td align="center">:q</td>
+<td align="center">离开vi(常用)</td>
+</tr>
+<tr>
+<td align="center">:q!</td>
+<td align="center">若曾修改过档案，又不想储存，使用!为强制离开不储存档案</td>
+</tr>
+<tr>
+<td align="center">:wq</td>
+<td align="center">储存后离开，若为:wq!则为强制储存后离开(常用)</td>
+</tr>
+<tr>
+<td align="center">:n1,n2 w [filename]</td>
+<td align="center">将n1到n2的内容储存称filename这个档案</td>
+</tr>
+<tr>
+<td align="center">:!command</td>
+<td align="center">暂时离开vi到命令行模式下执行command的显示结果</td>
+</tr>
+<tr>
+<td align="center"><strong>Vim环境的变更</strong></td>
+<td align="center"><strong>作用</strong></td>
+</tr>
+<tr>
+<td align="center">:set nu</td>
+<td align="center">显示行号，设定之后，会在每一行的前缀显示该行的行号</td>
+</tr>
+<tr>
+<td align="center">:set nonu</td>
+<td align="center">与set nu相反，为取消行号</td>
+</tr>
+</tbody></table>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/10/18/652ec6e6bfd3a.gif" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/10/18/652ec6e6bfd3a.gif" title="头像" alt="头像"></a><div class="post-copyright__author_name">L1ulee</div><div class="post-copyright__author_desc"></div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="https://blog.2sec.io/2022/05/11/Linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('https://blog.2sec.io/2022/05/11/Linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/')">Linux基础命令</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="https://blog.2sec.io/2022/05/11/Linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=Linux基础命令&amp;url=https://blog.2sec.io/2022/05/11/Linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/&amp;pic=" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="rm.copyPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blog.2sec.io" target="_blank">L1uleeの万事屋</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/Linux/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>Linux<span class="tagsPageCount">1</span></a><a class="post-meta__box__tags" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>操作系统<span class="tagsPageCount">1</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="https://img02.anheyu.com/adminuploads/1/2022/09/05/6315e146a8bbd.webp" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2023/06/01/%E4%B8%BB%E9%A2%98%E6%A0%87%E7%AD%BE/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img02.anheyu.com/adminuploads/1/2022/09/05/6315e146a8bbd.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">主题标签 Tag Plugins</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/10/18/652ec6e6bfd3a.gif" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__description">分享自己的生活是一件有趣的事</div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/"><h1 class="author-info__name">L1ulee</h1><div class="author-info__desc"></div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/L1ulee" target="_blank" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="social-icon faa-parent animated-hover" href="https://space.bilibili.com/53280580" target="_blank" title="BiliBili"><i class="anzhiyufont anzhiyu-icon-bilibili"></i></a></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E4%BB%80%E4%B9%88%E6%98%AFLinux%E5%91%BD%E4%BB%A4"><span class="toc-number">1.</span> <span class="toc-text">一、什么是Linux命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFShell%EF%BC%9F"><span class="toc-number">2.</span> <span class="toc-text">什么是Shell？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%91%BD%E4%BB%A4%E6%8F%90%E7%A4%BA%E7%AC%A6"><span class="toc-number">3.</span> <span class="toc-text">二、命令提示符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%AE%B6-home-%E7%9B%AE%E5%BD%95%EF%BC%9F"><span class="toc-number">4.</span> <span class="toc-text">什么是家(home)目录？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81Linux%E7%9A%84%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-number">5.</span> <span class="toc-text">三、Linux的常用命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%85%B3%E6%9C%BA%E5%91%BD%E4%BB%A4"><span class="toc-number">6.</span> <span class="toc-text">常用关机命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#init%E5%91%BD%E4%BB%A4"><span class="toc-number">7.</span> <span class="toc-text">init命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E9%87%8D%E5%90%AF%E5%91%BD%E4%BB%A4"><span class="toc-number">8.</span> <span class="toc-text">常用重启命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8B%93%E5%B1%95%E5%91%BD%E4%BB%A4"><span class="toc-number">9.</span> <span class="toc-text">拓展命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%87%E6%8D%A2%E8%B7%AF%E5%BE%84%E5%91%BD%E4%BB%A4"><span class="toc-number">10.</span> <span class="toc-text">切换路径命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%93%E5%8D%B0%E5%B7%A5%E4%BD%9C%E7%9B%AE%E5%BD%95%E5%91%BD%E4%BB%A4"><span class="toc-number">11.</span> <span class="toc-text">打印工作目录命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA%E7%9B%AE%E5%BD%95%E5%86%85%E5%AE%B9%E5%91%BD%E4%BB%A4"><span class="toc-number">12.</span> <span class="toc-text">显示目录内容命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E8%AF%BB%E5%86%99%E6%93%8D%E4%BD%9C"><span class="toc-number">13.</span> <span class="toc-text">文件读写操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%A4%B9%E5%91%BD%E4%BB%A4"><span class="toc-number">14.</span> <span class="toc-text">新建文件夹命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%E5%A4%B9%E5%91%BD%E4%BB%A4"><span class="toc-number">15.</span> <span class="toc-text">删除文件夹命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E5%BB%BA%E6%96%87%E4%BB%B6%E5%91%BD%E4%BB%A4"><span class="toc-number">16.</span> <span class="toc-text">新建文件命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E5%91%BD%E4%BB%A4"><span class="toc-number">17.</span> <span class="toc-text">删除命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%8D%E5%88%B6%E5%91%BD%E4%BB%A4"><span class="toc-number">18.</span> <span class="toc-text">复制命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A7%BB%E5%8A%A8%E5%91%BD%E4%BB%A4"><span class="toc-number">19.</span> <span class="toc-text">移动命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9%E5%91%BD%E4%BB%A4"><span class="toc-number">20.</span> <span class="toc-text">显示文件内容命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E6%9F%A5%E6%89%BE%E5%91%BD%E4%BB%A4"><span class="toc-number">21.</span> <span class="toc-text">文件查找命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E5%AE%B9%E6%9F%A5%E6%89%BE%E5%91%BD%E4%BB%A4"><span class="toc-number">22.</span> <span class="toc-text">内容查找命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81Linux%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%9A%84%E8%BE%85%E5%8A%A9%E6%93%8D%E4%BD%9C"><span class="toc-number">23.</span> <span class="toc-text">四、Linux命令行的辅助操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BF%AB%E6%8D%B7%E9%94%AE%EF%BC%9A"><span class="toc-number">24.</span> <span class="toc-text">快捷键：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94%E3%80%81Linux%E4%B8%AD%E6%89%93%E5%8C%85%E5%92%8C%E5%8E%8B%E7%BC%A9"><span class="toc-number">25.</span> <span class="toc-text">五、Linux中打包和压缩</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%89%93%E5%8C%85%E5%92%8C%E5%8E%8B%E7%BC%A9%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9A"><span class="toc-number">25.0.1.</span> <span class="toc-text">打包和压缩有什么区别：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%93%E5%8C%85%E5%91%BD%E4%BB%A4"><span class="toc-number">26.</span> <span class="toc-text">打包命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%8B%E7%BC%A9%E5%91%BD%E4%BB%A4"><span class="toc-number">27.</span> <span class="toc-text">压缩命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%8E%8B%E7%BC%A9%E5%91%BD%E4%BB%A4"><span class="toc-number">28.</span> <span class="toc-text">解压缩命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AD%E3%80%81Vi-Vim%E7%BC%96%E8%BE%91%E5%99%A8%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">29.</span> <span class="toc-text">六、Vi&#x2F;Vim编辑器的使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Vim%E7%BC%96%E8%BE%91%E5%99%A8%E7%9A%84%E5%AE%89%E8%A3%85"><span class="toc-number">30.</span> <span class="toc-text">Vim编辑器的安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F"><span class="toc-number">31.</span> <span class="toc-text">命令模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E6%A8%A1%E5%BC%8F"><span class="toc-number">32.</span> <span class="toc-text">输入模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%95%E7%BA%BF%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F"><span class="toc-number">33.</span> <span class="toc-text">底线命令模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E8%88%AC%E6%A8%A1%E5%BC%8F%E5%85%89%E6%A0%87%E7%A7%BB%E5%8A%A8%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-number">34.</span> <span class="toc-text">一般模式光标移动常用方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E8%88%AC%E6%A8%A1%E5%BC%8F%E4%B8%8B%E6%90%9C%E7%B4%A2%E6%9B%BF%E6%8D%A2%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E"><span class="toc-number">35.</span> <span class="toc-text">一般模式下搜索替换指令说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E8%88%AC%E6%A8%A1%E5%BC%8F%E4%B8%8B%E5%88%A0%E9%99%A4%E3%80%81%E5%A4%8D%E5%88%B6%E4%B8%8E%E7%B2%98%E8%B4%B4%E7%9A%84%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-number">36.</span> <span class="toc-text">一般模式下删除、复制与粘贴的常用方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E8%88%AC%E6%A8%A1%E5%BC%8F%E5%88%87%E6%8D%A2%E5%88%B0%E7%BC%96%E8%BE%91%E6%A8%A1%E5%BC%8F%E7%9A%84%E6%96%B9%E6%B3%95%E8%AF%B4%E6%98%8E"><span class="toc-number">37.</span> <span class="toc-text">一般模式切换到编辑模式的方法说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E8%88%AC%E6%A8%A1%E5%BC%8F%E5%88%87%E6%8D%A2%E5%88%B0%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%A8%A1%E5%BC%8F%E7%9A%84%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E%E5%8F%8AVim%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E5%8F%98%E6%9B%B4%E6%8C%87%E4%BB%A4%E8%AF%B4%E6%98%8E"><span class="toc-number">38.</span> <span class="toc-text">一般模式切换到命令行模式的指令说明及Vim环境变量变更指令说明</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/06/01/%E4%B8%BB%E9%A2%98%E6%A0%87%E7%AD%BE/" title="主题标签 Tag Plugins"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img02.anheyu.com/adminuploads/1/2022/09/05/6315e146a8bbd.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="主题标签 Tag Plugins"/></a><div class="content"><a class="title" href="/2023/06/01/%E4%B8%BB%E9%A2%98%E6%A0%87%E7%AD%BE/" title="主题标签 Tag Plugins">主题标签 Tag Plugins</a><time datetime="2023-06-01T07:55:44.000Z" title="发表于 2023-06-01 15:55:44">2023-06-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2022/05/11/Linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/" title="Linux基础命令">Linux基础命令</a><time datetime="2022-05-11T07:55:44.000Z" title="发表于 2022-05-11 15:55:44">2022-05-11</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" data-title="博客框架为Hexo_v7.0.0" title="博客框架为Hexo_v7.0.0"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Frame-Hexo.svg" alt="博客框架为Hexo_v7.0.0"/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" data-title="本站项目由Github托管" title="本站项目由Github托管"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Source-Github.svg" alt="本站项目由Github托管"/></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" data-title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.2.0/img/badge/Copyright-BY-NC-SA.svg" alt="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"/></a></p></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2021 - 2023 By <a class="footer-bar-link" href="/" title="L1ulee" target="_blank">L1ulee</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" href="/null"></a><a class="footer-bar-link cc" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" title="cc协议"><i class="anzhiyufont anzhiyu-icon-copyright-line"></i><i class="anzhiyufont anzhiyu-icon-creative-commons-by-line"></i><i class="anzhiyufont anzhiyu-icon-creative-commons-nc-line"></i><i class="anzhiyufont anzhiyu-icon-creative-commons-nd-line"></i></a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">2</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" href="https://blog.2sec.io/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 友链</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/link/"><i class="anzhiyufont anzhiyu-icon-link faa-tada" style="font-size: 0.9em;"></i><span> 友人帐</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li><li><a class="site-page child faa-parent animated-hover" href="javascript:toRandomPost()"><i class="anzhiyufont anzhiyu-icon-shoe-prints1 faa-tada" style="font-size: 0.9em;"></i><span> 随便逛逛</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/equipment/"><i class="anzhiyufont anzhiyu-icon-dice-d20 faa-tada" style="font-size: 0.9em;"></i><span> 我的装备</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/Hexo/" style="font-size: 0.88rem;">Hexo<sup>1</sup></a><a href="/tags/Linux/" style="font-size: 0.88rem;">Linux<sup>1</sup></a><a href="/tags/Tag-Plugins/" style="font-size: 0.88rem;">Tag Plugins<sup>1</sup></a><a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" style="font-size: 0.88rem;">操作系统<sup>1</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="2711290154" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random"></meting-js></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://music.163.com/playlist?id=2711290154&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.20/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.4/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script async src="/anzhiyu/random.js"></script><div class="js-pjax"><script>(() => {
+  const $mermaid = document.querySelectorAll('#article-container .mermaid-wrap')
+  if ($mermaid.length === 0) return
+  const runMermaid = () => {
+    window.loadMermaid = true
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'default'
+
+    Array.from($mermaid).forEach((item, index) => {
+      const mermaidSrc = item.firstElementChild
+      const mermaidThemeConfig = '%%{init:{ \'theme\':\'' + theme + '\'}}%%\n'
+      const mermaidID = 'mermaid-' + index
+      const mermaidDefinition = mermaidThemeConfig + mermaidSrc.textContent
+
+      const renderFn = mermaid.render(mermaidID, mermaidDefinition)
+
+      const renderV10 = () => {
+        renderFn.then(({svg}) => {
+          mermaidSrc.insertAdjacentHTML('afterend', svg)
+        })
+      }
+
+      const renderV9 = svg => {
+        mermaidSrc.insertAdjacentHTML('afterend', svg)
+      }
+
+      typeof renderFn === 'string' ? renderV9(renderFn) : renderV10()
+    })
+  }
+
+  const loadMermaid = () => {
+    window.loadMermaid ? runMermaid() : getScript('https://cdn.cbd.int/mermaid@10.2.4/dist/mermaid.min.js').then(runMermaid)
+  }
+
+  anzhiyu.addGlobalFn('themeChange', runMermaid, 'mermaid')
+
+  window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
+})()</script><input type="hidden" name="page-type" id="page-type" value="post"></div><script>var visitorMail = "visitor@anheyu.com";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
