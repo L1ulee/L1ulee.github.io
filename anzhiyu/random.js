@@ -1,1 +1,1 @@
-var posts=["2022/05/11/Linux基础命令/","2023/06/01/主题标签/"];function toRandomPost(){pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);};
+var posts=["2021/05/26/Linux基础命令/","2023/06/01/主题标签/","2021/05/26/用户权限划分/"];function toRandomPost(){pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);};
