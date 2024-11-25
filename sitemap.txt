@@ -12,10 +12,10 @@ https://blog.2sec.io/about/index.html
 https://blog.2sec.io/equipment/index.html
 https://blog.2sec.io/tags/index.html
 https://blog.2sec.io/
-https://blog.2sec.io/tags/%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/
+https://blog.2sec.io/tags/%E7%94%9F%E6%B4%BB%E6%97%A5%E5%B8%B8/
 https://blog.2sec.io/tags/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B6%AF/
 https://blog.2sec.io/tags/%E9%80%86%E5%90%91%E7%A0%B4%E8%A7%A3/
 https://blog.2sec.io/tags/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/
-https://blog.2sec.io/categories/%E6%97%A5%E5%B8%B8%E7%94%9F%E6%B4%BB/
+https://blog.2sec.io/categories/%E7%94%9F%E6%B4%BB%E6%97%A5%E5%B8%B8/
 https://blog.2sec.io/categories/%E8%B5%84%E6%BA%90%E5%88%86%E4%BA%AB/
 https://blog.2sec.io/categories/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B6%AF/
